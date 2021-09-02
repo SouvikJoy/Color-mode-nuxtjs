@@ -20,13 +20,13 @@
         </button>
       </div>
     </div>
-    <div class="index-2 h-screen">
+    <div class="index-2 xl:h-screen">
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 place-items-center h-screen">
+        <div class="grid md:grid-cols-2 place-items-center xl:h-screen">
           <div>
             <img src="~/assets/about.jpg" alt="">
           </div>
-          <div>
+          <div class="p-4">
             <div class="about_desc">
               Read About Me
             </div>
@@ -38,68 +38,64 @@
               but the majority have suffered alteration in some form, by injected humour,
               or randomised words which dont look even slightly believable. If you are going to use a passage of Lorem Ipsum,
             </p>
-            <div class="grid grid-rows-2">
-              <div class="grid grid-cols-2">
-                <div>
-                  <p class="about_heading dark:text-light-text">
-                    Educational Skills
-                  </p>
-                  <p class="about_desc">
-                    Lorem ipsum dolor sit amet, onecis et mollis ipsum dolor sit amet, onecis et mollis..
-                  </p>
-                </div>
-                <div>
-                  <p class="about_heading dark:text-light-text">
-                    My Strategies
-                  </p>
-                  <p class="about_desc">
-                    Lorem ipsum dolor sit amet, onecis et mollis.
-                  </p>
-                </div>
+            <div class="grid md:grid-cols-2">
+              <div>
+                <p class="about_heading dark:text-light-text">
+                  Educational Skills
+                </p>
+                <p class="about_desc">
+                  Lorem ipsum dolor sit amet, onecis et mollis ipsum dolor sit amet, onecis et mollis..
+                </p>
               </div>
-              <div class="grid grid-cols-2">
-                <div>
-                  <p class="about_heading dark:text-light-text">
-                    Development Skills
-                  </p>
-                  <p class="about_desc">
-                    Lorem ipsum dolor sit amet, onecis et mollis.
-                  </p>
-                </div>
-                <div>
-                  <p class="about_heading dark:text-light-text">
-                    My Qualities
-                  </p>
-                  <p class="about_desc">
-                    Lorem ipsum dolor sit amet, onecis et mollis ipsum dolor sit amet, onecis et mollis..
-                  </p>
-                </div>
+              <div>
+                <p class="about_heading dark:text-light-text">
+                  My Strategies
+                </p>
+                <p class="about_desc">
+                  Lorem ipsum dolor sit amet, onecis et mollis.
+                </p>
+              </div>
+              <div>
+                <p class="about_heading dark:text-light-text">
+                  Development Skills
+                </p>
+                <p class="about_desc">
+                  Lorem ipsum dolor sit amet, onecis et mollis.
+                </p>
+              </div>
+              <div>
+                <p class="about_heading dark:text-light-text">
+                  My Qualities
+                </p>
+                <p class="about_desc">
+                  Lorem ipsum dolor sit amet, onecis et mollis ipsum dolor sit amet, onecis et mollis..
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="index-3 grid place-items-center h-screen text-center bg-light-text">
+    <div class="index-3 grid place-items-center xl:h-screen text-center bg-light-text">
       <div class="max-w-5xl mx-auto">
-        <p class="about_heading_big">
+        <p class="text-5xl font-bold">
           Projects Handled So Far
         </p>
-        <p class="about-desc">
+        <p class="text-md">
           There are many variations of passages of Lorem Ipsum available, but the majority have
           suffered alteration in some form, by injected humour, or randomised words which dont look even
           slightly believable. If you are going to use a passage of Lorem Ipsum,
         </p>
-        <div class="grid grid-cols-3 place-items-center">
-          <div v-for="(item, index) in 3" :key="index">
+        <div class="grid md:grid-cols-2 xl:grid-cols-3 place-items-center">
+          <div v-for="(item, index) in 3" :key="index" class="my-4">
             <project-card-view />
           </div>
         </div>
       </div>
     </div>
-    <div class="index-4 h-screen">
+    <div class="index-4 xl:h-screen">
       <div class="container mx-auto">
-        <div class="grid grid-cols-2 place-items-center h-screen">
+        <div class="grid md:grid-cols-2 place-items-center xl:h-screen">
           <div>
             <BarChart :data="barChartData" :options="barChartOptions" :height="400" />
           </div>
@@ -111,11 +107,11 @@
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by injected humour
             </p>
-            <div class="grid grid-cols-3">
-              <div v-for="(skill, index) in 6" :key="index">
+            <div class="grid md:grid-cols-3">
+              <div v-for="(skill, index) in skills" :key="index">
                 <div class="p-4">
                   <p class="text-2xl dark:text-light-text">
-                    HTML
+                    {{ skill }}
                   </p>
                   <p class="text-sm text-gray-500">
                     Lorem ipsum dolor sit amet, onecis et mollis ipsum dolor sit amet, onecis et mollis..
@@ -151,6 +147,7 @@ export default {
   },
   data () {
     return {
+      skills: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'BOOTSTRAP', 'VUE', 'NUXT.JS', 'LARAVEL'],
       barChartData: {
         labels: ['HTML', 'CSS', 'JAVASCRIPT', 'PHP', 'BOOTSTRAP', 'VUE', 'NUXT.JS', 'LARAVEL'],
         datasets: [
@@ -163,12 +160,12 @@ export default {
       },
       barChartOptions: {
         responsive: true,
-        maintainAspectRatio: false,
+        maintainAspectRatio: true,
         legend: {
           display: false
         },
         title: {
-          display: true,
+          display: false,
           text: 'Skills',
           fontSize: 24
         },

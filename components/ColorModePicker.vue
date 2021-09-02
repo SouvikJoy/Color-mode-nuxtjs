@@ -1,5 +1,5 @@
 <template>
-  <div class="flex">
+  <div class="flex dark:text-white">
     <ul>
       <li v-for="color of colors" :key="color">
         <component
