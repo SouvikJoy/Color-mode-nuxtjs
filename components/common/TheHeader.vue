@@ -1,19 +1,19 @@
 <template>
   <div class="flex justify-around place-items-center p-4">
-    <div>
-      Brand
-    </div>
+    <nuxt-link to="/">
+      <img src="~/assets/icons/logo.svg" alt="">
+    </nuxt-link>
     <div>
       <nuxt-link to="/">
         Home
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/portfolio">
         Portfolio
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/skills">
         Skills
       </nuxt-link>
-      <nuxt-link to="/">
+      <nuxt-link to="/contact">
         Contact
       </nuxt-link>
     </div>

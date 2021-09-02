@@ -45,39 +45,5 @@ export default {
 </script>
 
 <style lang="scss">
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-ul li {
-  display: inline-block;
-  padding: 5px;
-}
-p {
-  margin: 0;
-  padding-top: 5px;
-  padding-bottom: 20px;
-}
-.feather {
-  position: relative;
-  top: 0;
-  cursor: pointer;
-  padding: 7px;
-  background-color: var(--bg-secondary);
-  border: 2px solid var(--border-color);
-  margin: 0;
-  border-radius: 5px;
-  transition: all 0.1s ease;
-}
-.feather:hover {
-  top: -3px;
-}
-.feather.preferred {
-  border-color: var(--color-primary);
-  top: -3px;
-}
-.feather.selected {
-  color: var(--color-primary);
-}
+
 </style>

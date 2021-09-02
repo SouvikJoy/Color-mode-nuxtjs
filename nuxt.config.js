@@ -5,11 +5,17 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'It is a portfolio website' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', sizes: '512x512', href: '/favicon-512x512.ico' },
+      { rel: 'icon', sizes: '256x256', href: '/favicon-256x256.ico' },
+      { rel: 'icon', sizes: '128x128', href: '/favicon-128x128.ico' },
+      { rel: 'icon', sizes: '64x64', href: '/favicon-64x64.ico' },
+      { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.ico' },
+      { rel: 'icon', sizes: '16x16', href: '/favicon-16x16.ico' }
     ]
   },
 
@@ -20,6 +26,7 @@ export default {
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,8 +55,11 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    icon: {
+      fileName: 'icon.png'
+    },
     manifest: {
-      lang: 'en'
+      lang: 'en-US'
     }
   },
 

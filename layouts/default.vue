@@ -1,12 +1,12 @@
 <template>
   <div id="App" class="bg-gray-200 dark:bg-gray-900">
-    <header class="dark:bg-black bg-gray-500">
+    <header class="fixed w-screen dark:bg-gray-900 bg-opacity-50 dark:bg-opacity-80 bg-gray-500">
       <TheHeader />
     </header>
     <main>
       <nuxt />
     </main>
-    <footer class="dark:bg-black bg-gray-500">
+    <footer class="bg-gray-200 dark:bg-gray-900">
       <TheFooter />
     </footer>
   </div>

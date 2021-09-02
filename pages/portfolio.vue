@@ -1,10 +1,12 @@
 <template>
-$END$
+  <div class="grid place-items-center h-screen">
+    Portfolio
+  </div>
 </template>
 
 <script>
 export default {
-name: "portfolio"
+  name: 'Portfolio'
 }
 </script>
 
