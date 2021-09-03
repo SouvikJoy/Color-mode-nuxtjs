@@ -1,3 +1,6 @@
+import path from 'path'
+import fs from 'fs'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -128,7 +131,12 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
-
+  server: {
+    https: {
+      key: fs.readFileSync(path.resolve(__dirname, 'server.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'server.crt'))
+    }
+  },
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     icon: {
@@ -156,7 +164,9 @@ export default {
   colorMode: {
     classSuffix: ''
   },
-
+  router: {
+    linkExactActiveClass: 'text-green-500'
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }

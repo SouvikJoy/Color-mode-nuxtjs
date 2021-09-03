@@ -4,7 +4,7 @@
       <TheHeader />
     </header>
     <main>
-      <nuxt />
+      <nuxt :key="$route.fullPath" />
     </main>
     <footer class="bg-gray-200 dark:bg-gray-900">
       <TheFooter />

@@ -22,7 +22,7 @@
         109/5, Hatembag, East Rayer Bazar, Dhaka - 1209
       </p>
       <div class="flex place-items-center justify-center">
-        <input type="text" placeholder="Your Email Here" class="mr-6 rounded-2xl py-2 px-4">
+        <input type="text" placeholder="Your Email Here" class="mr-6 rounded-2xl py-2 px-4 outline-none">
         <button class="py-2 px-4 bg-green-500 rounded-2xl text-sm text-white">
           Submit
         </button>
